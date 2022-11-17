@@ -1,0 +1,27 @@
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+li, ul {
+    list-style-type: none;
+}
+
+.hero__title {
+    @include font (Poppins,700,3rem);
+    color: $primary-color;
+}
+
+.hero__subtitle {
+    @include font (Raleway,400,1rem);
+    color:$dark-grey;
+}
+
+.description__item--title {
+    @include font (poppins,500,1.5rem);
+    color: $secondary-color;
+}
+
+.description__item--subtitle {
+    @include font (Raleway,400,1rem);
+    color: $dark-grey;
+}

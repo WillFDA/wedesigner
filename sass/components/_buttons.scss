@@ -1,0 +1,7 @@
+.hero__btn{
+    background-color: black;
+    color: $white;
+    @include font (raleway,600,1rem);
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+}
