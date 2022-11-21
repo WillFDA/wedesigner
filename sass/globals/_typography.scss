@@ -25,3 +25,58 @@ li, ul {
     @include font (Raleway,400,1rem);
     color: $dark-grey;
 }
+
+.aboutus__item--title {
+    @include font (Poppins,500,20px);
+    color: $secondary-color;
+}
+
+.aboutus__item--p {
+    @include font (Raleway,400,14px);
+    color: $dark-grey;
+    line-height: 25px;
+}
+
+.p__title {
+    @include font (Raleway,600,14px);
+}
+
+.services__title {
+  @include font (Poppins, 500, 2rem) ;
+  color: $primary-color;
+}
+
+.services__item--title {
+    @include font (Raleway, 600, 1rem);
+    color: black;
+}
+
+.services__item--icon {
+    font-size: 1.2rem;
+    color: $secondary-color;
+}
+
+.footer__title {
+    position: relative;
+    @include font (Poppins, 700, 2rem);
+    color: $secondary-color;
+}
+
+.footer__subtitle {
+    @include font (Poppins, 500, 1.1rem);
+    color: $primary-color;
+}
+
+.footer__p {
+    @include font (raleway,400,14px);
+    color: black;
+}
+
+.footer--icon {
+    font-size: 1rem;
+    color: $white;
+    background-color: $secondary-color;
+    padding: 1.2rem;
+    border-radius: 100%;
+}
+
