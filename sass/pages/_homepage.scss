@@ -4,6 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include desktop-only {
+        max-width: 1450px;
+        margin: auto;
+        padding: 1rem 2rem;
+    }
     &__logo {
         width: 4rem;
     }
@@ -18,9 +23,11 @@
     margin-top: 2em;
     &__title {
         margin-bottom: 1.2rem;
+        max-width: 400px;
     }
     &__subtitle {
         margin-bottom: 2rem;
+        max-width: 400px;
     }
 }
 
@@ -28,6 +35,9 @@
     width: 100%;
     padding: 4rem 2rem;
     background: linear-gradient(180deg, rgba(248,248,248,1) 0%, rgba(248,248,248,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    @include desktop-only {
+        padding: 4rem 0rem;
+    }
     &__container {
         background-color: $white;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
@@ -36,12 +46,18 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        @include desktop-only {
+            max-width: 1400px;
+            margin: auto;
+            flex-direction: row;
+            padding: 4rem;
+        }
     }
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     &__item--icon {
         margin-left:1rem;
@@ -51,18 +67,56 @@
 }
 
 .aboutus {
-    width: 100%;
+    max-width: 1400px;
     background-color: $white;
+    margin: auto;
     &__container {
-        margin: 4rem 2rem;
+        position: relative;
         background-color:$light-grey;
-        padding: 2rem;
         border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        padding-bottom: 8rem;
+        // width: 80%;
+        margin: auto;
+        margin-bottom: 8rem;
+        @include desktop-only {
+            padding: 4rem;
+            flex-direction: row;
+            align-items: flex-start;
+        }
     }
     &__item {
         display: flex;
         flex-direction: column;
+        @include desktop-only {
+            width: 40%;
+        }
     }
+    &__img {
+        @include desktop-only {
+            position: absolute;
+            right: 4rem;
+            top: 4rem;
+            width: 45%;
+            height: 130%;
+        }
+        object-fit: cover;
+        height: 272px; 
+        border-radius: 24px;
+        width: 80%;
+        bottom: -9rem;
+        position: absolute;
+    }
+}
+
+.banner {
+    margin-top: 8rem;
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
 }
 
 .services {
@@ -73,12 +127,20 @@
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        @include desktop-only {
+            max-width: 1200px;
+            margin: auto;
+        }
     }
     &__box {
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: 24px;
+        @include desktop-only {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
@@ -89,6 +151,11 @@
         gap: 1rem;
         width: 100%;
         border-radius: 8px;
+        @include desktop-only {
+            margin: auto;
+            width: 30%;
+            padding-left: 5rem;
+        }
     }
 }
 

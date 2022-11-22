@@ -20,3 +20,10 @@ main {
 footer {
     background-color: $light-grey;
 }
+
+.container {
+    @include desktop-only {
+        max-width: 1400px;
+        margin: auto;
+    }
+}

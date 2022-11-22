@@ -22,8 +22,9 @@ li, ul {
 }
 
 .description__item--subtitle {
-    @include font (Raleway,400,1rem);
+    @include font (Raleway,400,0.875rem);
     color: $dark-grey;
+    line-height: 20px;
 }
 
 .aboutus__item--title {
