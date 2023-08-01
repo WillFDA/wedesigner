@@ -1,3 +1,4 @@
+import Providers from "./Providers";
 import "./globals.css";
 import { Poppins, Raleway } from "next/font/google";
 
@@ -18,8 +19,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className + raleway.className}>{children}</body>
+    <html
+      lang="en"
+      className="light"
+      style={{ colorScheme: "light" }}
+      suppressHydrationWarning
+    >
+      <body className={poppins.className + raleway.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

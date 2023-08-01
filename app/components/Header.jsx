@@ -2,26 +2,22 @@
 import Image from "next/image";
 import Container from "../Container";
 import { useState } from "react";
-
+import { Bars3Icon } from "@heroicons/react/24/solid";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   console.log(isOpen);
   return (
     <Container>
-      <header className="w-full flex justify-between pt-6">
+      <header className="w-full flex justify-between pt-14 items-center">
         <Image
           src="/wedesigner-blue-red.svg"
-          width={113}
-          height={55}
+          width={64}
+          height={31}
           alt="Logo Wedesigner bleu et rouge"
         />
-        <Image
-          src="/Buger.svg"
-          width={32}
-          height={28}
-          alt="Burger Icon for navbar"
+        <Bars3Icon
           onClick={() => setIsOpen(!isOpen)}
-          style={{ cursor: "pointer", zIndex: "20" }}
+          className="h-10 w-10 text-gray-500 z-50 cursor-pointer"
         />
         <nav
           className={`${
